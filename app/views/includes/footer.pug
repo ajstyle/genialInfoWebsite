@@ -1,36 +1,29 @@
 footer#footer
   .major.special.w-100
-    h1.text-center.text-decoration Connect with us
+    
   section.footer-contact
     .container.text-white.contact.p-4
-      .row.bg-primary.contact-banner
-        .col-md-6.p-4
-          h2.text-black Head office
+      .row.contact-banner
+        .col-md-4.p-4
+          img.main-logo(src="/images/logo.png").mb-5
           dl.alt
-            dt.text-black Address
-            dd.text-green Cheenis Solution UG <br>Friedrich-Ebert-Allee 13 <br>53113 Bonn, <br/> Germany
-            dt.text-black  Phone
-            dd
-              a.text-green(href="tel:+49022892939142") +49 (0) 228 9293 9142
-            dt.text-black  Fax
-            dd.text-green +49 (0) 228 9293 9101
-            dt.text-black Email
-            dd
-              a.text-green(href='mailto:info@cheenissolution.com') info@cheenissolution.com
-        .col-md-6.p-4
-          h2.text-black Branch office
-          dl.alt
-            dt.text-black  Address
-            dd.text-green Cheenis Solutions Pvt Ltd <br/>
-              | #48/91, Vasantha Garden Main Street,
-              | <br/> Chennai 600023,
-              | <br/> India
-            dt.text-black   Email
-              i.fa.fa-email
-            dd.text-green
-              a.text-green(href='mailto:info@cheenissolution.com') info@cheenissolution.com
+            p(style = 'color : white ') Genial Info employs a team of experienced professionals who have invested their huge efforts in proving that every vision can be accomplished with the right planning and implementation.
+        .col-md-8.p-4
+          p.text-white Quick Link
+          ul.text-white(style = 'list-style-type : none ; line-height: 40px; margin-left: -33px;')
+            li 
+               a.text-white(href = '/Aboutus')| About us
+            li 
+               a.text-white(href = '/Portfolios')| Portfolios
+            li
+               a.text-white(href = '/Services')|Services
+            li 
+               a.text-white(href = '/Technologies')|Technologies
+            li 
+               a.text-white(href = '/Insight')|Insight
+
       .row.justify-content-center.arrow
-        i.fa.fa-sort-down.fa-4x.text-primary
+        i.fa.fa-sort-down.fa-4x(style = 'color : #323849')
 
     .main.w-100.d-grid__center.d-grid
       ul.nav.justify-content-center
@@ -50,7 +43,7 @@ footer#footer
         a(href='/impressum.html') IMPRESSUM
      
 
-.footer.border-top.border.bg-primary
+.footer.border-top.border
   if showFbCustomerChat
     .fb-customerchat(
         page_id="<PAGE_ID>"

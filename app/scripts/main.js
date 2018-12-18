@@ -4,136 +4,55 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
+	
+   //Random Text
 
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
-	});
-
-	$(function() {
-
-		var	$window = $(window),
-			$body = $('body'),
-			$main = $('#main');
-
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
-
-		// Nav.
-			var $nav = $('#nav');
-
-			if ($nav.length > 0) {
-
-				// Shrink effect.
-					$main
-						.scrollex({
-							mode: 'top',
-							enter: function() {
-								$nav.addClass('alt');
-							},
-							leave: function() {
-								$nav.removeClass('alt');
-							},
-						});
-
-				// Links.
-					var $nav_a = $nav.find('a');
-
-					$nav_a
-						.scrolly({
-							speed: 1000,
-							offset: function() { return $nav.height(); }
-						})
-						.on('click', function() {
-
-							var $this = $(this);
-
-							// External link? Bail.
-								if ($this.attr('href').charAt(0) != '#')
-									return;
-
-							// Deactivate all links.
-								$nav_a
-									.removeClass('active')
-									.removeClass('active-locked');
-
-							// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-								$this
-									.addClass('active')
-									.addClass('active-locked');
-
-						})
-						.each(function() {
-
-							var	$this = $(this),
-								id = $this.attr('href'),
-								$section = $(id);
-
-							// No section for this link? Bail.
-								if ($section.length < 1)
-									return;
-
-							// Scrollex.
-								$section.scrollex({
-									mode: 'middle',
-									initialize: function() {
-
-										// Deactivate section.
-											if (skel.canUse('transition'))
-												$section.addClass('inactive');
-
-									},
-									enter: function() {
-
-										// Activate section.
-											$section.removeClass('inactive');
-
-										// No locked links? Deactivate all links and activate this section's one.
-											if ($nav_a.filter('.active-locked').length == 0) {
-
-												$nav_a.removeClass('active');
-												$this.addClass('active');
-
-											}
-
-										// Otherwise, if this section's link is the one that's locked, unlock it.
-											else if ($this.hasClass('active-locked'))
-												$this.removeClass('active-locked');
-
-									}
-								});
-
-						});
-
-			}
-
-		// Scrolly.
-			$('.scrolly').scrolly({
-				speed: 1000
-			});
-
-	});
-
+	var messages=['Website Development','Mobile App Development','Web App Development' , 'Ionic App Development ' , 'Angular App Development' , 'React App Development' ];
+	var rank=1;
+	document.getElementById('myTypewriter').addEventListener('webkitAnimationEnd', changeTxt);
+	document.getElementById('myTypewriter').addEventListener('animationend', changeTxt);
+	function changeTxt(e){
+		console.log(this) ;
+	  var _h1 = this.getElementsByTagName('h1') ;
+console.log(_h1[0].style);
+	  _h1[0].style.WebkitAnimation = 'none'; // set element animation to none
+	   setTimeout(function() { // you surely want a delay before the next message appears
+		  _h1[0].innerHTML=messages[rank];
+		  var speed =3.5*messages[rank].length/50; // adjust the speed (3.5 is the original speed, 20 is the original string length
+		  _h1[0].style.WebkitAnimation = 'typing '+speed+'s steps(40, end), blink-caret .75s step-end infinite'; //  switch to the original set of animation      
+		  (rank===messages.length-1)?rank=0:rank++; // if you have displayed the last message from the array, go back to the first one, else go to next message
+		}, 1000);
+	}
 })(jQuery);
+
+//Scrolling Header Cbange function 
+window.onscroll = () => {
+	var windowObj = window ; 
+	const nav = document.querySelector('#navbar');
+	if(windowObj.scrollY <= 700) nav.className = 'navbar navbar-expand-lg fixed-top nav bg-secondary'; else nav.className = 'navbar nav-op navbar-expand-lg fixed-top nav bg-secondary';
+  };
+
+  $(".filter-button").click(function(){
+	var value = $(this).attr('data-filter');
+	
+	if(value == "all")
+	{
+		//$('.filter').removeClass('hidden');
+		$('.filter').show('1000');
+	}
+	else
+	{
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+		$(".filter").not('.'+value).hide('3000');
+		$('.filter').filter('.'+value).show('3000');
+		
+	}
+});
+
+if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");

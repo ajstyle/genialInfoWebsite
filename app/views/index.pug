@@ -2,117 +2,133 @@ extends layouts/default
 block prepend link
   - var selected = 'HOME'
 block title
-  title='Cheenissolution | Home'
+  title='Genial Info | Home'
 block content
-  section.banner-homepage-slop.mt-5
-    .container
+
+  // Company List  
+  section
+    .companylistcontainer
      .row.text-white.d-relative.mb-5
-        .col-md-4.col-sm-12
-          .card.mb-3
-            .card-header.bg-dark
-              h2.text-center.lead IT Counsulting
-            img.card-img-top(alt="IT consulting image" src="/images/it-consulting.jpg")
-            .card-body.text-dark
-              p Cheenis Solution offer a complete set of IT services including Internet sites and applications, hosting services, IT infrastructure, Smart Products, Software Development and Professional Support Service (PSS).
-              p We deliver SAP implementation services in addition to support for on-going running operations in a remarkably quality-oriented and cost-effective manner within pledged timeframes.
-            .card-footer
-              a(href="/services.html").btn.btn-outline-success.btn-block Know More
-        .col-md-4.col-sm-12
-          .card.mb-3
-            .card-header.bg-dark
-              h2.text-center.lead Training & Developent
-            img.card-img-top(src="/images/training-development-icon.jpg" alt="Talent resourcing and training")
-            .card-body.text-dark
-              p Contracting out your recruitment and training process to us grants you access to the right people at the right circumstance.
-              p We impersonate ourselves as a part of your team, operating with your hiring managers, on your brand foot, with your culture, to manage all things related to talent acquisition.
-              P Technical training, coporate soft skills & campus to corporate training modules.
-            .card-footer
-              a(href="/services.html#talent").btn.btn-outline-success.btn-block Know More
-
-        .col-md-4.col-sm-12
-          .card.mb-3
-            .card-header.bg-dark
-              h2.text-center.lead IOT Solutions
-            img.card-img-top(src="/images/iot-logo.jpg" alt="Talent resourcing and training")
-            .card-body.text-dark
-              p Cheenis Solution supports you with various IoT and it-specific questions. Our range ofservices ranges from the provision of individual experts for specific tasks to the acquisition of holistic analysis, planning and implementation projects by our own teams.
-              p We specialize in implementing IoT applications for all platforms in a variety of languages.We develop end-to-end solutions for the IoT. From the hardware, firmware and backend, to the web or mobile app.
-            .card-footer
-              a(href="/services.html#iotSolutions").btn.btn-outline-success.btn-block Know More
-     
-        .row.text-white.d-relative.mb-5
-         .col-md-6.col-sm-12
-          .card.mb-3
-            .card-header.bg-dark
-              h2.text-center.lead Automation Solutions
-            img.card-img-top(src="/images/automation-process.jpg" alt="Talent resourcing and training")
-            .card-body.text-dark
-              p Cheenis Solution provides real-time process / industry automation management software andsolutions for Supervisory HMI, ICSS/ PLC/ DCS/ESD/ F&G/ SCADA/ BMS SYSTEMS, Mobile Operations, Production Management, MES, Performance Management, EMI, and Integration with Asset Management, Supply and Demand Chain and ERP applications. Cheenis has the necessary expertise to engineer innovative, effective and reliable solutions.
-            .card-footer
-              a(href="/services.html#automation").btn.btn-outline-success.btn-block Know More
-         .col-md-6.col-sm-12
-          .card.mb-3
-            .card-header.bg-dark
-              h2.text-center.lead Health Care
-            img.card-img-top(src="/images/medical.jpg" alt="Health Care")
-            .card-body.text-dark
-              p We offer professional support, care and assistance in everyday life Fun, joy and retaining a meaningful life stand at the center of our work.Cheenis provides professional service in the care and health sector. We offer comprehensive support to people from all strata and age structures, to make their life easier. Find out whether we can assist you. 
-            .card-footer
-              a(href="/services.html#healthcare").btn.btn-outline-success.btn-block Know More
+      .col-sm-2
+       img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/06/Air_India_Express_wildnet-cleint-gray-2.png' width = '70px' height = '50px')
+      .col-sm-2
+        img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/05/wildnet-home-24-1.png' width = '80px' height = '50px')
+      .col-sm-2
+        img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/11/adani_transparent.png' width = '80px' height = '50px')
 
 
-  // The Future
-  section.future.mb-5
-    .container
-      .row
-        .col-sm-12.col-md-3.border-right.d-flex.align-items-center
-          h1.display-4.text-info The Future
-        .col-sm-12.col-md-9
-          p.lead Looking ahead, we remain confident in our ongoing ability to deliver attractive long-term growth
-            | and value creation. 
-            
-            p.lead We focus to-
-            p.lead| • Expand and develop our existing businesses and markets </br>
-            p.lead| • Continually evaluate and look open into new markets
-            p.lead| • Sustain and flourish our distinction for leadership in indulgence
-            p.lead| We perceive the future appears good with the attribute of people we work with. The leadership of 
-             | Cheenis feels humble and courteous by the ambition, commitment, loyalty and delivery of every
-             | employee who individually and mutually reflect the Cheenis attitude of which each one can be so
-             | truly proud.
-          p.lead We pledge to sustain this attitude and guarantee that it continues to help the development and
-            | growth of the people who select to work with us and the business itself.
-            | We feel exclusive to work with such an excellent class of people and do not take that liability
-            | mildly, rather feel we can handle the future with confidence with them by our side.
+  // Services 
+  section
+   p.numberText  We begin to serve you before you know it
+   p.numberText(style = 'color : orange')  Our Solution to your Imaginations
+  .container-fluid
+  .row.port-page
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.hdpe.zoom
+      img.img-responsive.center-block.port-image(src='/images/mobile-phone.jpg' width = '365px' height = '365px')
+      .image-text
+        h1| Mobile App
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.sprinkle.zoom
+      img.img-responsive.center-block.port-image(src='/images/earth.jpg' width = '365px' height = '365px')
+      .image-text
+        h1| Web App
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.hdpe.zoom
+      img.img-responsive.center-block.port-image(src='/images/seo.jpg' width = '365px' height = '365px')
+      .image-text
+        h1| SEO
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.irrigation.zoom
+      img.img-responsive.center-block.port-image(src='/images/website.jpg' width = '365px' height = '365px')
+      .image-text
+        h1| Website Development
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.spray.zoom
+      img.img-responsive.center-block.port-image(src='http://fakeimg.pl/365x365/')
+    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.irrigation.zoom
+      img.img-responsive.center-block.port-image(src='http://fakeimg.pl/365x365/')
+
+
+  // Counting             
+  section.counting
+    .containerproject         
+     .typewriter
+       p.numberText  it is the NUMBER that keep us motivated
+       .row.justify-content-md-center.px-5.t-5.number
+          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
+          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
+          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
+          span.col.col-lg-2(style='font-size : 4px ; color : white' )
+           svg(height='80', viewbox='0 50 200 200' , )
+            path(fill='none', stroke='#333333', stroke-width='5', d='M100,100 \
+             C200,0 200,200 100,100\
+             C0,0 0,200 100,100z')
+       .row.justify-content-md-center.px-5.t-5.text
+         p.col.col-lg-2 Technocrats 
+         p.col.col-lg-2 Projects
+         p.col.col-lg-2 Clients
+         p.col.col-lg-2 Happy Moments
+  
+
+  
+
+  // Recent Blogs 
+  section
+  .containerblog
+    h1.text-center(style = "color : orange")|Recent Blogs
+    h1.text-center(style = "color : orange")|------------
+     hr(size = '30')
+    .row
+      .col-sm-4
+       .card
+        img.card-img-top(src='http://fakeimg.pl/365x365/', alt='Card image cap')
+        .card-body
+          h5.card-title Special title treatment
+          p.card-text With supporting text below as a natural lead-in to additional content.
+          a.btn.btn-primary(href='#') Go somewhere
+      .col-sm-4
+         .card
+          img.card-img-top(src='http://fakeimg.pl/365x365/', alt='Card image cap')
+          .card-body
+            h5.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a.btn.btn-primary(href='#') Go somewhere
+      .col-sm-4
+         .card
+          img.card-img-top(src='http://fakeimg.pl/365x365/', alt='Card image cap')
+          .card-body
+            h5.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a.btn.btn-primary(href='#') Go somewhere
+ 
+
 
   // Values block
-  section.bg-primary
-    .container.py-4
+  section
       .row
-        .col-sm-12.col-md-3.border-right
-          h4.text-black  CORPORATE MISSION
-          p.text-green Our mission is to supervise companies throughout the process of strategic change.
-           | We assist strategic and tactical corporate responses to the challenges and opportunities caused by global proliferation, technology and contention. Our function is to operate as a reliable consultant, delivering objective and results-driven analysis, solutions and implementation.
-          a.d-block.pt-2.text-info(href="/corporate.html#mission")
-            i.fa.fa-long-arrow-right.fa-3x
+        .col-md-6.p-5
+          h3 Let’s Talk Something To Solve Something.
+          hr(size = '15')
+          p| Looking for a quotation or need any technology advice, Let’s talk.
+          .p-5
+          img(src = 'https://www.wildnettechnologies.com/wp-content/uploads/2018/07/wildnet-home-2.png')
+          | +91 7877361402
+        .col-md-5.p-5.containercontact
+           h3 Write us
+           .form-group
+            label(for='usr') Name:
+            input#usr.form-control(type='text')
+           .form-group
+            label(for='last name') Last Name:
+            input#pwd.form-control(type='text')
+           .form-group
+            label(for='contact number') Contact Number:
+            input#pwd.form-control(type='text')         
+           .form-group
+            label(for='email Address') Email Address:
+            input#pwd.form-control(type='text')        
+           .form-group
+            label(for='Project Description') Project Description:
+            textarea#exampleFormControlTextarea1.form-control.rounded-0(rows='2')
 
-        .col-sm-12.col-md-3.border-right
-          h4.text-black CORPORATE VISION
-          p.text-green Our Vision is “Delivering the right automation and IT solution and making it accessible for everyone.”
-          p.text-green Our success is built on an extraordinary commitment to quality and excellence in providing noteworthy services, client delight, robust focus on collaboration establishment and determination to thrive in every business endeavor.
-          a.d-block.pt-2.text-info(href="/corporate.html#vision")
-            i.fa.fa-long-arrow-right.fa-3x
+           
 
-        .col-sm-12.col-md-3.border-right
-          h4.text-black CORPORATE VALUES
-          p.text-green Cheenis Solution is driven by a passion for quality and excellence and guided by its core corporate values and will persist to show the way as the most dynamic and fortunate business organization.
-          p.text-green Our zeal for automation, technology and our customers is reflected in our corporate values: With our strong values which orbits around Innovation, Integrity, Quality, Customer Focus, Teamwork, Reliability Cheenis Solution will persist on its route to success.
-          a.d-block.pt-2.text-info(href="/corporate.html#values")
-            i.fa.fa-long-arrow-right.fa-3x
 
-        .col-sm-12.col-md-3
-          h4.text-black  CORPORATE RESPONSIBILTY & SUSTAINABILITY
-          p.text-green Corporate Social Responsibility (CSR) is a significant element in accomplishing our vision, particularly in a manner that it values and builds its connections with customers, business associates, employees and the entire community.
-          p.text-green We are a liable, pledged, and dedicated corporate citizen.
-          a.d-block.pt-2.text-info(href="/corporate.html#responsibility")
-            i.fa.fa-long-arrow-right.fa-3x
 
+      
