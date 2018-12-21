@@ -5,18 +5,14 @@ block title
   title='Genial Info | Home'
 block content
 
-  // Company List  
-  section
-    .companylistcontainer
-     .row.text-white.d-relative.mb-5
-      .col-sm-2
-       img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/06/Air_India_Express_wildnet-cleint-gray-2.png' width = '70px' height = '50px')
-      .col-sm-2
-        img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/05/wildnet-home-24-1.png' width = '80px' height = '50px')
-      .col-sm-2
-        img(src='https://www.wildnettechnologies.com/wp-content/uploads/2018/11/adani_transparent.png' width = '80px' height = '50px')
 
-
+  main#main
+    section.banner-homepage.d-none.d-sm-block
+            .banner-text
+             h1| WE &nbsp;  DO
+             #myTypewriter.typewriter
+               h1 Website Development
+    section.banner-mobilepage.d-block.d-sm-none
   // Services 
   section
    p.numberText  We begin to serve you before you know it
@@ -45,8 +41,28 @@ block content
       img.img-responsive.center-block.port-image(src='http://fakeimg.pl/365x365/')
 
 
+
+  // Company List  
+  section.mt-5.mb-5
+  h1.text-center [ Our Customers]
+    .companylistcontainer
+     
+     .row.text-white.d-relative.mb-5.mt-5
+      .col-sm-4
+       img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
+      .col-sm-4
+        img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
+      .col-sm-4
+        img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px')
+      .col-sm-4
+         img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
+      .col-sm-4
+         img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
+      .col-sm-4
+         img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px' )
+      
   // Counting             
-  section.counting
+  section.counting.mt-5
     .containerproject         
      .typewriter
        p.numberText  it is the NUMBER that keep us motivated
@@ -69,10 +85,9 @@ block content
   
 
   // Recent Blogs 
-  section
-  .containerblog
+  section.mt-5
+  .containerblog.mb-5.px-5.t-5
     h1.text-center(style = "color : orange")|Recent Blogs
-    h1.text-center(style = "color : orange")|------------
      hr(size = '30')
     .row
       .col-sm-4
@@ -100,7 +115,7 @@ block content
 
 
   // Values block
-  section
+  section.mt-6
       .row
         .col-md-6.p-5
           h3 Let’s Talk Something To Solve Something.

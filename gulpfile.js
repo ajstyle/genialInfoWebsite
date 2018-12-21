@@ -16,7 +16,7 @@ let dev = true;
 
 
 gulp.task('views', () => {
-  return gulp.src('app/views/*.pug')
+  return gulp.src(['app/views/*.pug' ,'app/views/*.html'] )
     .pipe($.plumber())
     .pipe($.data(function(file) {
       return JSON.parse(fs.readFileSync('app/meta/site-data.json'))
@@ -131,6 +131,7 @@ gulp.task('serve', () => {
     ]).on('change', reload);
 
     gulp.watch('app/**/*.pug', ['views']);
+    gulp.watch('app/**/*.html', ['views']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
