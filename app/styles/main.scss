@@ -90,6 +90,11 @@ a.active{
   transform: translate(-50%, -50%);
   
 }
+
+@mixin heroImage {
+  height: 80vh ; 
+  background-size : cover ;  
+}
 .banner-text {
   @include hero-text;
   top: 28%;
@@ -182,7 +187,7 @@ height: 350px
   color: white;
   font-family: 'Exo', sans-serif;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black ; /* The typwriter cursor */
+  border-right: .15em solid white ; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -221,7 +226,7 @@ height: 350px
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: black }
+  50% { border-color: white }
   
 }
 
@@ -278,7 +283,7 @@ height: 350px
 .port-image {
   width: 100%;
   padding : 30px;
-  opacity : 0.7
+  
 }
 
 .zoom:hover {
@@ -302,13 +307,16 @@ height: 350px
 }
 
 .hero{
-  background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg');
-  height: 80vh ; 
-  background-size : cover ; 
-  padding : 8vh ; 
+  background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/cup-of-coffee.jpg');
   padding : 30vh ; 
+  @include heroImage();
 }
 
+.team {
+  background-image : linear-gradient(#040277, rgba(10, 3, 64, 0.49)), url(/images/team.jpg);
+  padding : 8vh ; 
+  @include heroImage();
+}
 section h1 {
   font-family : 'Oswald' , sans-serif ; 
   color : white ; 
@@ -322,4 +330,37 @@ section .aboutus {
   padding-left : .2rem ; 
   text-transform: uppercase ; 
   text-align: center ; 
+}
+
+.line{
+  width: 30%;
+  border-bottom: 2px solid white;
+}
+.line-orange{
+  width: 30%;
+  border-bottom: 2px solid orange;
+}
+.icon{
+  color : white ; 
+}
+
+.containerFullWidth {
+  width :100% ; 
+}
+
+
+.circle-image{
+  width:200px;
+  height:200px;
+
+}
+
+.containerName {
+  margin-left: 68px;
+  font-weight: bolder;
+
+}
+
+h2 {
+  color : orange
 }
