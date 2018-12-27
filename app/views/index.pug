@@ -9,10 +9,14 @@ block content
   main#main
     section.banner-homepage.d-none.d-sm-block
             .banner-text
-             h1| WE &nbsp;  DO
+             h1.heading| WE &nbsp;  DO
              #myTypewriter.typewriter
-               h1 Website Development
+               h1(style = 'color : white; font-size : 40px') Website Development
     section.banner-mobilepage.d-block.d-sm-none
+            .banner-mobile-text
+             h1.heading-mobile| WE &nbsp;  DO
+             #mobileTypewriter.typewriter
+               h1(style = 'color : white ; font-size : 20px') Website Development
   // Services 
   section
    p.numberText  We begin to serve you before you know it
@@ -63,7 +67,7 @@ block content
       
   // Counting             
   section.counting.mt-5
-    .containerproject         
+  .companylistcontainer.mt-5
      .typewriter
        p.numberText  it is the NUMBER that keep us motivated
        .row.justify-content-md-center.px-5.t-5.number
@@ -141,7 +145,7 @@ block content
            .form-group
             label(for='Project Description') Project Description:
             textarea#exampleFormControlTextarea1.form-control.rounded-0(rows='2')
-
+           button.btn.btn-success.center.mt-5 Send
            
 
 

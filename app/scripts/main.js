@@ -6,13 +6,15 @@
 
 
 (function($) {
-	
+
    //Random Text
 
 	var messages=['Website Development','Mobile App Development','Web App Development' , 'Ionic App Development ' , 'Angular App Development' , 'React App Development' ];
 	var rank=1;
 	document.getElementById('myTypewriter').addEventListener('webkitAnimationEnd', changeTxt);
 	document.getElementById('myTypewriter').addEventListener('animationend', changeTxt);
+	document.getElementById('mobileTypewriter').addEventListener('webkitAnimationEnd', changeTxt);
+	document.getElementById('mobileTypewriter').addEventListener('animationend', changeTxt);
 	function changeTxt(e){
 		console.log(this) ;
 	  var _h1 = this.getElementsByTagName('h1') ;
@@ -31,6 +33,7 @@ console.log(_h1[0].style);
 window.onscroll = () => {
 	var windowObj = window ; 
 	const nav = document.querySelector('#navbar');
+	console.log(nav);
 	if(windowObj.scrollY <= 700) nav.className = 'navbar navbar-expand-lg fixed-top nav bg-secondary'; else nav.className = 'navbar nav-op navbar-expand-lg fixed-top nav bg-secondary';
   };
 
