@@ -9,37 +9,40 @@ block content
   main#main
     section.banner-homepage.d-none.d-sm-block
             .banner-text
-             h1| WE &nbsp;  DO
+             h1.heading| WE &nbsp;  DO
              #myTypewriter.typewriter
-               h1 Website Development
+               h1(style = 'color : white; font-size : 40px') Website Development
     section.banner-mobilepage.d-block.d-sm-none
+            .banner-mobile-text
+             h1.heading-mobile| WE &nbsp;  DO
+             #mobileTypewriter.typewriter
+               h1(style = 'color : white ; font-size : 20px') Website Development
   // Services 
   section
    p.numberText  We begin to serve you before you know it
    p.numberText(style = 'color : orange')  Our Solution to your Imaginations
   .container-fluid
-  .row.port-page
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.hdpe.zoom
-      img.img-responsive.center-block.port-image(src='/images/mobile-phone.jpg' width = '365px' height = '365px')
+  .row.justify-content-md-center
+    .col.col-lg-3.mb-5.hero-mobile
       .image-text
-        h1| Mobile App
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.sprinkle.zoom
-      img.img-responsive.center-block.port-image(src='/images/earth.jpg' width = '365px' height = '365px')
+        h1| Mobile Apps
+    .col.col-lg-3.mb-5.hero-mobile.hero-app
       .image-text
-        h1| Web App
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.hdpe.zoom
-      img.img-responsive.center-block.port-image(src='/images/seo.jpg' width = '365px' height = '365px')
+        h1| Web Apps
+    .col.col-lg-3.mb-5.hero-mobile.hero-gallery-seo
       .image-text
-        h1| SEO
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.irrigation.zoom
-      img.img-responsive.center-block.port-image(src='/images/website.jpg' width = '365px' height = '365px')
+        h1| Seo 
+    .col.col-lg-3.mb-5.hero-mobile.hero-gallery-digital
       .image-text
-        h1| Website Development
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.spray.zoom
-      img.img-responsive.center-block.port-image(src='http://fakeimg.pl/365x365/')
-    .gallery_product.col-lg-4.col-md-4.col-sm-4.col-xs-6.filter.irrigation.zoom
-      img.img-responsive.center-block.port-image(src='http://fakeimg.pl/365x365/')
+        h1| Digital Marketing
+    .col.col-lg-3.mb-5.hero-mobile.hero-gallery-ui
+      .image-text
+        h1| UI/UX
+    .col.col-lg-3.mb-5.hero-mobile.hero-website-ui
+      .image-text
+        h1| Website Design 
 
+    
 
 
   // Company List  
@@ -63,7 +66,7 @@ block content
       
   // Counting             
   section.counting.mt-5
-    .containerproject         
+  .companylistcontainer.mt-5
      .typewriter
        p.numberText  it is the NUMBER that keep us motivated
        .row.justify-content-md-center.px-5.t-5.number
@@ -141,7 +144,7 @@ block content
            .form-group
             label(for='Project Description') Project Description:
             textarea#exampleFormControlTextarea1.form-control.rounded-0(rows='2')
-
+           button.btn.btn-success.center.mt-5 Send
            
 
 

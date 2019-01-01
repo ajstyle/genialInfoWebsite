@@ -16,7 +16,7 @@ let dev = true;
 
 
 gulp.task('views', () => {
-  return gulp.src(['app/views/*.pug' ,'app/views/*.html'] )
+  return gulp.src(['app/views/*.pug' ,'app/views/*.html' , 'app/views/services/*.pug','app/views/services/*.html'] )
     .pipe($.plumber())
     .pipe($.data(function(file) {
       return JSON.parse(fs.readFileSync('app/meta/site-data.json'))
