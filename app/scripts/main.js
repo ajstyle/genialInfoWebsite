@@ -37,10 +37,10 @@ window.onscroll = () => {
 	if(windowObj.scrollY <= 700) nav.className = 'navbar navbar-expand-lg fixed-top nav bg-secondary'; else nav.className = 'navbar nav-op navbar-expand-lg fixed-top nav bg-secondary';
   };
 
-  $(".filter-button").click(function(){
+  $('.filter-button').click(function(){
 	var value = $(this).attr('data-filter');
 	
-	if(value == "all")
+	if(value == 'all')
 	{
 		//$('.filter').removeClass('hidden');
 		$('.filter').show('1000');
@@ -49,13 +49,13 @@ window.onscroll = () => {
 	{
 //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
 //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-		$(".filter").not('.'+value).hide('3000');
+		$('.filter').not('.'+value).hide('3000');
 		$('.filter').filter('.'+value).show('3000');
 		
 	}
 });
 
-if ($(".filter-button").removeClass("active")) {
-$(this).removeClass("active");
+if ($('.filter-button').removeClass('active')) {
+$(this).removeClass('active');
 }
-$(this).addClass("active");
+$(this).addClass('active');
