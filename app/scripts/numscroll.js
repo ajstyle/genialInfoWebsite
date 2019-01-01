@@ -9,11 +9,11 @@
 
 (function($){
     
-    $(window).on("load",function(){
+    $(window).on('load',function(){
         $(document).scrollzipInit();
         $(document).rollerInit();
     });
-    $(window).on("load scroll resize", function(){
+    $(window).on('load scroll resize', function(){
         $('.numscroller').scrollzip({
             showFunction    :   function() {
                                     numberRoller($(this).attr('data-slno'));
@@ -22,14 +22,14 @@
         });
     });
     $.fn.scrollzipInit=function(){
-        $('body').prepend("<div style='position:fixed;top:0px;left:0px;width:0;height:0;' id='scrollzipPoint'></div>" );
+        $('body').prepend('<div style=\'position:fixed;top:0px;left:0px;width:0;height:0;\' id=\'scrollzipPoint\'></div>' );
     };
     $.fn.rollerInit=function(){
         var i=0;
         $('.numscroller').each(function() {
             i++;
            $(this).attr('data-slno',i); 
-           $(this).addClass("roller-title-number-"+i);
+           $(this).addClass('roller-title-number-'+i);
         });        
     };
     $.fn.scrollzip = function(options){
