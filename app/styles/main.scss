@@ -17,7 +17,7 @@ $black : #000 ;
   border-radius: 50%;
 }
 .main-logo{
-  width: 200px;
+  width: 110px;
 }
 .w-100{
  width: 100% !important;
@@ -91,10 +91,7 @@ a.active{
   
 }
 
-@mixin heroImage {
-  height: 80vh ; 
-  background-size : cover ;  
-}
+
 .banner-text {
   @include hero-text;
   top: 25%;
@@ -252,7 +249,7 @@ height: 350px
 }
 .containerblog{
   width : 100% ;
-  height: 30% ; 
+  height: 10% ; 
   background-color: #fdfdfd ; 
 } 
 
@@ -316,15 +313,22 @@ height: 350px
   margin-left: 30px ; 
 }
 
+
+@mixin heroImage {
+  background-size : cover ;  
+  padding-top : 15vh ; 
+}
+
+
 .hero{
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/cup-of-coffee.jpg');
   padding : 30vh ; 
-  @include heroImage();
+    @include heroImage();
 }
 
 .hero-graphics{
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/moon.jpg');
-  padding : 20vh ; 
+  
   @include heroImage();
 }
 
@@ -336,12 +340,12 @@ height: 350px
 }
 .hero-ecommerce{
      background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.58)), url('/images/wallet.jpg');
-    padding: 20vh;
+  
     @include heroImage();
 }
 .hero-web{
   background-image : linear-gradient(rgb(0, 55, 255), rgba(0, 0, 0, 0.67)), url('/images/code.jpg');
-  padding : 20vh ; 
+
   @include heroImage();
 }
 .service-mobile{
@@ -351,21 +355,33 @@ height: 350px
 }
 .hero-seo {
   background-image : linear-gradient(#000000ad, rgba(0, 0, 0, 0.67)), url('/images/seo.jpg');
-  padding-top : 20vh ; 
+
   @include heroImage();
 }
 .hero-enterprise {
   background-image : linear-gradient(#000000ad, rgba(0, 0, 0, 0.67)), url('/images/skyscraper.jpg');
-  padding-top : 20vh ; 
+
   @include heroImage();
 }
 .hero-android {
   background-image: linear-gradient(#1dca08, rgba(26, 202, 5, 0.55)), url('/images/android1.jpg');
-  padding-top : 20vh ; 
+
   @include heroImage();
 }
 
+.hero-privacy {
+  background-image: linear-gradient(#e6baa0bf, rgba(255, 45, 11, 0.55)), url(/images/privacy.jpg);
+  padding-top: 20vh;
+  height: 40vh;
+  background-size: cover;
+}
 
+.hero-term {
+  background-image: linear-gradient(#4b13f5cc, rgba(139, 11, 255, 0)), url(/images/term.png);
+  padding-top: 20vh;
+  height: 40vh;
+  background-size: cover;
+}
 
 .hero-mobile {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/mobile-phone.jpg');
@@ -561,15 +577,4 @@ h2 {
 }
 
 
-
-@media screen and (max-width: 450px) {
- 
-
-  section .image-hand {
-  margin-top: 78px;
-  margin-left: 126px;
-  width: 300px;
-  height: 300px;
-  }
-}
-
+  
