@@ -12,14 +12,14 @@
     "impressum"
   ],
   "seo": {
-    "title": "<tag line of the website site.data.json>",
-    "description": "<description of website from site-data.json>"
+    "title": "A Web 2.0 Company | GenialInfo.",
+    "description": "Genialinfo is a technology company to solve clients software requirements. GenialInfo creates best affordable online tools like Websites, Mobile apps, IOs Apps, Android aplication, staic websites, SEO and web applicatios."
   },
   "showFbCustomerChat": false,
   "showFbCommentBox": false,
   "social": {
-    "fb": "https://www.facebook.com/cheenissolution",
-    "twitter": "https://www.twitter.com/cheenissolution",
-    "linkedin": "https://www.linkedin.com/company/cheenissolution"
+    "fb": "https://www.facebook.com/genialinfo",
+    "twitter": "https://www.twitter.com/genialinfo",
+    "linkedin": "https://www.linkedin.com/company/genialinfo"
   }
 }

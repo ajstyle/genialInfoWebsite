@@ -1,6 +1,9 @@
 footer#footer
+  div
+    include ./templates/_contactus
+
   .major.special.w-100
-    
+
   section.footer-contact
     .container.text-white.contact.p-4
       .row.contact-banner
@@ -11,15 +14,15 @@ footer#footer
         .col-md-8.p-4
           p.text-white Quick Link
           ul.text-white(style = 'list-style-type : none ; line-height: 40px; margin-left: -33px;')
-            li 
+            li
                a.text-white(href = '/Aboutus')| About us
-            li 
+            li
                a.text-white(href = '/Portfolios')| Portfolios
             li
                a.text-white(href = '/Services')|Services
-            li 
+            li
                a.text-white(href = '/Technologies')|Technologies
-            li 
+            li
                a.text-white(href = '/Insight')|Insight
 
       .row.justify-content-center.arrow
@@ -38,11 +41,13 @@ footer#footer
             span.label.fa.fa-linkedin.fa-2x.text-light
 
     p.m-0.p-2.text-center.text-white
-      small All rights reserved &copy Copyrights 2018  &nbsp;
-        a(href='./privacy.html') Privacy Policy  &nbsp;
-        a(href='./term.html') Terms of Services
-       
-     
+      small All rights reserved &copy Copyrights 2017 - 2019  &nbsp;
+        a(href='./privacy.html')
+          strong | &nbsp; Privacy Policy  &nbsp;
+        a(href='./term.html')
+          strong | &nbsp; Terms of Services
+
+
 
 .footer.border-top.border
   if showFbCustomerChat
