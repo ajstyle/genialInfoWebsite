@@ -6,9 +6,13 @@
 
 $primary: rgb(0, 108, 181);
 // $secondary: rgb(168, 207, 69);
-$secondary : black ; 
-$black : #000 ; 
+$secondary : black ;
+$black : #000 ;
 @import 'scss/bootstrap';
+
+.transparent{
+ opacity: 0.7;
+}
 
 .d-relative {
   display:relative;
@@ -88,7 +92,7 @@ a.active{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
 }
 
 
@@ -96,19 +100,19 @@ a.active{
   @include hero-text;
   top: 25%;
   color: black;
-  } 
+  }
 
   .banner-mobile-text {
     @include hero-text;
     top: 20%;
     color: black;
     font-size : 10px ;
-    } 
+    }
 .image-text {
   @include hero-text;
   top: 50%;
   color: white;
-  
+
 }
 
 
@@ -157,12 +161,12 @@ a.active{
 background-color : $primary ;
 }
 .green-button{
-  background-color : $secondary ; 
+  background-color : $secondary ;
 }
 
 .valueimage {
-  margin-top: 20px 
-  
+  margin-top: 20px
+
 }
 .center {
   margin-left: auto;
@@ -172,19 +176,12 @@ background-color : $primary ;
 }
 
 .imagesize{
-width : 350px ; 
+width : 350px ;
 height: 350px
 }
 
-.nav{
-  opacity : 0.6
-}
-
-.nav-op{
-  opacity : 1 
-}
 .white-text {
-  color : white 
+  color : white
 }
 
 
@@ -196,7 +193,7 @@ height: 350px
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  animation: 
+  animation:
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
@@ -207,18 +204,18 @@ height: 350px
   border-right: .15em solid white ; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  font-size : 6rem ; 
-  line-height : 1.3  ; 
-  text-transform: uppercase ; 
-  text-align: center ; 
+  font-size : 6rem ;
+  line-height : 1.3  ;
+  text-transform: uppercase ;
+  text-align: center ;
   animation:  typing 3.5s steps(30, end);
 
-   
+
 }
 
 .companylistcontainer{
   width : 100% ;
-  height: 10% ; 
+  height: 10% ;
   background-color: #fffdfd;
 }
 
@@ -234,24 +231,24 @@ height: 350px
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: white }
-  
+
 }
 
 .containeproject{
   width : 100% ;
-  height: 10% ; 
-  
+  height: 10% ;
+
 }
 .containercontact{
   width : 70% ;
-  height: auto ; 
-  background-color: #fafafa ; 
+  height: auto ;
+  background-color: #fafafa ;
 }
 .containerblog{
   width : 100% ;
-  height: 10% ; 
-  background-color: #fdfdfd ; 
-} 
+  height: 10% ;
+  background-color: #fdfdfd ;
+}
 
 .number{
   font-size: 40px;
@@ -274,7 +271,7 @@ height: 350px
   color: black ;
 }
 
-.numberText { 
+.numberText {
   font-size: 20px;
     text-align: center;
     padding: 15px;
@@ -282,53 +279,45 @@ height: 350px
 }
 
 .projectlist {
-  height: 300px ; 
-  padding : 40px ; 
+  height: 300px ;
+  padding : 40px ;
 }
 
 
 .port-image {
   width: 100%;
   padding : 30px;
-  
+
 }
 
 .zoom:hover {
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1,2); /* Safari 3-8 */
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .containerproject   {
   background-image: url("/images/technology.jpg") ;
-  opacity:0.7 ; 
-}
-
-.dropdown-item{
-  
-  color : black !important ; 
-}
-
-.nav-item {
-  margin-left: 30px ; 
+  opacity:0.7 ;
 }
 
 
 @mixin heroImage {
-  background-size : cover ;  
-  padding-top : 15vh ; 
+  background-size : cover ;
+  padding-top : 15vh ;
 }
 
 
 .hero{
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/cup-of-coffee.jpg');
-  padding : 30vh ; 
+  padding-top: 20vh;
+  padding-bottom : 20vh ;
     @include heroImage();
 }
 
 .hero-graphics{
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/moon.jpg');
-  
+
   @include heroImage();
 }
 
@@ -340,7 +329,7 @@ height: 350px
 }
 .hero-ecommerce{
      background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.58)), url('/images/wallet.jpg');
-  
+
     @include heroImage();
 }
 .hero-web{
@@ -350,8 +339,8 @@ height: 350px
 }
 .service-mobile{
   background-image : linear-gradient(#000000ad, rgba(0, 0, 0, 0.67)), url('/images/mobilePhone.jpg');
-  padding : 20vh ; 
-  
+  padding : 20vh ;
+
 }
 .hero-seo {
   background-image : linear-gradient(#000000ad, rgba(0, 0, 0, 0.67)), url('/images/seo.jpg');
@@ -385,9 +374,9 @@ height: 350px
 
 .hero-mobile {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/mobile-phone.jpg');
-  padding : 20vh ; 
-  background-size : cover ;  
-  
+  padding : 20vh ;
+  background-size : cover ;
+
 }
 
 .hero-mobile:hover {
@@ -397,10 +386,10 @@ height: 350px
 
 .hero-app {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/earth.jpg');
-  padding : 20vh ;  
-  background-size : cover ; 
-  margin-left: 10px ; 
- 
+  padding : 20vh ;
+  background-size : cover ;
+  margin-left: 10px ;
+
 }
 .hero-app:hover {
   background-image : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 125, 253, 0.2)), url('/images/earth.jpg');
@@ -409,9 +398,9 @@ height: 350px
 
 .hero-gallery-seo {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/seo.jpg');
-  padding : 20vh ; 
-  background-size : cover ;  
-  margin-left: 10px ; 
+  padding : 20vh ;
+  background-size : cover ;
+  margin-left: 10px ;
 }
 
 .hero-gallery-seo:hover {
@@ -421,9 +410,9 @@ height: 350px
 
 .hero-gallery-digital {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/digital-marketing.jpg');
-  padding : 20vh ; 
-  background-size : cover ;  
-  margin-left: 10px ; 
+  padding : 20vh ;
+  background-size : cover ;
+  margin-left: 10px ;
 }
 
 .hero-gallery-digital:hover {
@@ -433,9 +422,9 @@ height: 350px
 
 .hero-gallery-ui {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/deer.jpg');
-  padding : 20vh ; 
-  background-size : cover ;  
-  margin-left: 10px ; 
+  padding : 20vh ;
+  background-size : cover ;
+  margin-left: 10px ;
 }
 
 .hero-gallery-ui:hover {
@@ -446,9 +435,9 @@ height: 350px
 
 .hero-website-ui {
   background-image : linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url('/images/wood.jpg');
-  padding : 20vh ; 
-  background-size : cover ;  
-  margin-left: 10px ; 
+  padding : 20vh ;
+  background-size : cover ;
+  margin-left: 10px ;
 }
 
 .hero-website-ui:hover {
@@ -457,33 +446,33 @@ height: 350px
 }
 .team {
   background-image : linear-gradient(#040277, rgba(10, 3, 64, 0.49)), url('/images/team.jpg');
-  padding : 8vh ; 
+  padding : 8vh ;
   @include heroImage();
 }
 section h1 {
-  font-family : 'Oswald' , sans-serif ; 
-  color : white ; 
+  font-family : 'Oswald' , sans-serif ;
+  color : white ;
 
 }
 
 
 
 section .aboutus {
-  font-size : 3rem ; 
-  line-height : 1.3  ; 
-  text-shadow : 1px  1px 1px #000 ; 
-  padding-left : .2rem ; 
-  text-transform: uppercase ; 
-  text-align: center ; 
+  font-size : 3rem ;
+  line-height : 1.3  ;
+  text-shadow : 1px  1px 1px #000 ;
+  padding-left : .2rem ;
+  text-transform: uppercase ;
+  text-align: center ;
 }
 
 section .graphics {
-  font-size : 1.2rem ; 
-  line-height : 2  ; 
-  text-shadow : 1px  1px 1px #000 ; 
-  padding-left : .2rem ; 
-  text-transform: title ; 
-  text-align: center ; 
+  font-size : 1.2rem ;
+  line-height : 2  ;
+  text-shadow : 1px  1px 1px #000 ;
+  padding-left : .2rem ;
+  text-transform: title ;
+  text-align: center ;
 }
 .line{
   width: 30%;
@@ -494,11 +483,11 @@ section .graphics {
   border-bottom: 2px solid orange;
 }
 .icon{
-  color : white ; 
+  color : white ;
 }
 
 .containerFullWidth {
-  width :100% ; 
+  width :100% ;
 }
 
 
@@ -555,12 +544,12 @@ h2 {
     display: block;
   }
   section .aboutus {
-    font-size : 1.5rem ; 
-    line-height : 1.3  ; 
-    text-shadow : 1px  1px 1px #000 ; 
-    padding-left : .2rem ; 
-    text-transform: uppercase ; 
-    text-align: center ; 
+    font-size : 1.5rem ;
+    line-height : 1.3  ;
+    text-shadow : 1px  1px 1px #000 ;
+    padding-left : .2rem ;
+    text-transform: uppercase ;
+    text-align: center ;
   }
 
   section .image-hand {
@@ -577,4 +566,4 @@ h2 {
 }
 
 
-  
+

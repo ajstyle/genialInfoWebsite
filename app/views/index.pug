@@ -5,7 +5,6 @@ block title
   title='Genial Info | Home'
 block content
 
-
   main#main
     section.banner-homepage.d-none.d-sm-block
             .banner-text
@@ -17,7 +16,7 @@ block content
              h1.heading-mobile| WE &nbsp;  DO
              #mobileTypewriter.typewriter
                h1(style = 'color : white ; font-size : 20px') Website Development
-  // Services 
+  // Services
   section
    p.numberText  We begin to serve you before you know it
    p.numberText(style = 'color : orange')  Our Solution to your Imaginations
@@ -31,7 +30,7 @@ block content
         h1| Web Apps
     .col.col-lg-3.mb-5.hero-mobile.hero-gallery-seo
       .image-text
-        h1| Seo 
+        h1| Seo
     .col.col-lg-3.mb-5.hero-mobile.hero-gallery-digital
       .image-text
         h1| Digital Marketing
@@ -40,62 +39,60 @@ block content
         h1| UI/UX
     .col.col-lg-3.mb-5.hero-mobile.hero-website-ui
       .image-text
-        h1| Website Design 
-
-    
+        h1| Website Design
 
 
-  // Company List  
-  section.mt-5.mb-5
-  h1.text-center [ Our Customers]
-    .companylistcontainer
-     
-     .row.text-white.d-relative.mb-5.mt-5
-      .col-sm-4
-       img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
-      .col-sm-4
-        img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
-      .col-sm-4
-        img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px')
-      .col-sm-4
-         img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
-      .col-sm-4
-         img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
-      .col-sm-4
-         img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px' )
-      
-  // Counting             
+
+
+  // Company List currently hidden will be updated soon.
+  section.mt-5.mb-5(hidden)
+    h1.text-center [ Our Customers]
+      .companylistcontainer
+      .row.text-white.d-relative.mb-5.mt-5
+        .col-sm-4
+        img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
+        .col-sm-4
+          img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
+        .col-sm-4
+          img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px')
+        .col-sm-4
+          img(src='https://www.hcltech.com/sites/default/files/styles/large/public/images/guideline_based1.png?itok=JdASqCkG'  width = '300px'   )
+        .col-sm-4
+          img(src='https://logos-download.com/wp-content/uploads/2016/07/Airtel_logo.png' width = '200px' )
+        .col-sm-4
+          img(src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Adani_2012_logo.png' width = '200px' )
+
+  // Counting
   section.counting.mt-5
   .companylistcontainer.mt-5
      .typewriter
        p.numberText  it is the NUMBER that keep us motivated
-       .row.justify-content-md-center.px-5.t-5.number
-          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
-          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
-          span.numscroller.col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
-          span.col.col-lg-2(style='font-size : 4px ; color : white' )
-           svg(height='80', viewbox='0 50 200 200' , )
+       .row.px-5.t-5.number
+          .col
+            div.numscroller(data-min='1', data-max='10', data-delay='1', data-increment='1')
+            p.lead Technocrats
+          .col
+            div.numscroller(data-min='1', data-max='14', data-delay='1', data-increment='1')
+            p.lead Projects
+          .col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
+            div.numscroller(data-min='1', data-max='17', data-delay='1', data-increment='1')
+            p.lead client
+          .col
+           svg(height='50', viewbox='0 20 200 120' , )
             path(fill='none', stroke='#333333', stroke-width='5', d='M100,100 \
              C200,0 200,200 100,100\
              C0,0 0,200 100,100z')
-       .row.justify-content-md-center.px-5.t-5.text
-         p.col.col-lg-2 Technocrats 
-         p.col.col-lg-2 Projects
-         p.col.col-lg-2 Clients
-         p.col.col-lg-2 Happy Moments
-  
+            p.lead Happy Moments
 
-  
-
-  // Recent Blogs 
+  // Technologies we use
   section.mt-5
   .containerblog.mb-5.px-5.t-5
     h1.text-center(style = "color : orange")|Technology We Use
      hr(size = '30')
-    .row  
+    .row
       .col-sm-4
        .card
-        img.card-img-top.center(src='/images/js.png', alt='Card image cap' style = "height : 100px" ) 
+        img.card-img-top.center(src='/images/js.png', alt='Card image cap' style = "height : 100px" )
         .card-body
           h5.card-title Javascript
           p.card-text With supporting text below as a natural lead-in to additional content.
@@ -115,10 +112,10 @@ block content
             p.card-text With supporting text below as a natural lead-in to additional content.
             a.btn.btn-primary(href='#') Read more
 
-      .row  
+      .row
       .col-sm-4
        .card
-        img.card-img-top.center(src='/images/android.png', alt='Card image cap' ) 
+        img.card-img-top.center(src='/images/android.png', alt='Card image cap' )
         .card-body
           h5.card-title Android Apps
           p.card-text With supporting text below as a natural lead-in to additional content.
@@ -137,40 +134,3 @@ block content
             h5.card-title Angular Js
             p.card-text With supporting text below as a natural lead-in to additional content.
             a.btn.btn-primary(href='#') Read more
-      
- 
-
-
-  // Values block
-  section.mt-6
-      .row
-        .col-md-6.p-5
-          h3 Let’s Talk Something To Solve Something.
-          hr(size = '15')
-          p| Looking for a quotation or need any technology advice, Let’s talk.
-          .p-5
-          img(src = 'https://www.wildnettechnologies.com/wp-content/uploads/2018/07/wildnet-home-2.png')
-          | +91 7877361402
-        .col-md-5.p-5.containercontact
-           h3 Write us
-           .form-group
-            label(for='usr') Name:
-            input#usr.form-control(type='text')
-           .form-group
-            label(for='last name') Last Name:
-            input#pwd.form-control(type='text')
-           .form-group
-            label(for='contact number') Contact Number:
-            input#pwd.form-control(type='text')         
-           .form-group
-            label(for='email Address') Email Address:
-            input#pwd.form-control(type='text')        
-           .form-group
-            label(for='Project Description') Project Description:
-            textarea#exampleFormControlTextarea1.form-control.rounded-0(rows='2')
-           button.btn.btn-success.center.mt-5 Send
-           
-
-
-
-      
