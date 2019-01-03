@@ -1,0 +1,31 @@
+// Contact us section
+section.pt-5#contactus
+  .container
+    h1.text-primary.mb-5.text-center Contact Us
+    .row
+      .col-md-6.p-5
+        h3 Let’s Talk Something To Solve.
+        hr(size = '15')
+        p| Looking for a quotation or need any technology advice, Let’s talk.
+        .p-5
+        img(src = 'https://www.wildnettechnologies.com/wp-content/uploads/2018/07/wildnet-home-2.png')
+        | +91 7877361402
+      .col-md-5.p-5.containercontact
+        h3 Write us
+        form(action="https://formspree.io/hi@genailinfo.com", method="POST")
+          .form-group
+            label(for='usr') Name:
+            input#usr.form-control(type='text', name="name" , required)
+          .form-group
+            label(for='last name') Last Name:
+            input#pwd.form-control(type='text', name="lastName", required)
+          .form-group
+            label(for='contact number') Contact Number:
+            input#pwd.form-control(type='number', name="contactNumber", required ,minlength="10")
+          .form-group
+            label(for='email Address') Email Address:
+            input#pwd.form-control(type='email', name="emailAddress", required)
+          .form-group
+            label(for='Project Description') Project Description:
+            textarea#exampleFormControlTextarea1.form-control.rounded-0(rows='2')
+          button.btn.btn-success.center.mt-5 Send
