@@ -10,6 +10,13 @@ $secondary : black ;
 $black : #000 ;
 @import 'scss/bootstrap';
 
+body {
+  margin: 0;
+  text-align: center;
+}
+body {
+  overflow-x:hidden;
+}
 .transparent{
  opacity: 0.7;
 }
@@ -58,15 +65,39 @@ body{
   font-family: 'Varela Round', sans-serif;
 }
 
-.banner-homepage{
-  background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/banner1.jpg");
+@mixin banner {
+  
   height: 45em;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position : relative ;
 }
+.banner-homepage{
+  background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/banner1.jpg");
+  @include banner;
+}
 
+.banner2-homepage{
+  background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/mobile.jpg");
+  @include banner;
+}
+
+.banner3-homepage{
+  background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/seo.jpg");
+  @include banner;
+}
+.banner4-homepage{
+  background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/deer.jpg");
+  @include banner;
+}
+.technology-homepage {
+  background:  linear-gradient(rgb(63, 0, 255), rgba(0, 0, 0, 0.2)), url(/images/frontend-technologies.png);
+  height: 24em;
+  background-position: center;
+  background-repeat: no-repeat;
+  position : relative ;
+}
 .banner-mobilepage{
   background:  linear-gradient(rgba(102,51,0,0.6),rgba(153,102,51,0.2)),url("/images/banner1.jpg");
   height: 20em;
@@ -194,7 +225,7 @@ height: 350px
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation:
-    typing 3.5s steps(30, end),
+    typing .5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 
@@ -219,6 +250,9 @@ height: 350px
   background-color: #fffdfd;
 }
 
+.bannerContainer {
+  width : 100% ;
+}
 
 
 /* The typing effect */
@@ -230,7 +264,7 @@ height: 350px
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: white }
+  90% { border-color: white }
 
 }
 
@@ -339,7 +373,7 @@ height: 350px
 }
 .service-mobile{
   background-image : linear-gradient(#000000ad, rgba(0, 0, 0, 0.67)), url('/images/mobilePhone.jpg');
-  padding : 20vh ;
+  @include heroImage();
 
 }
 .hero-seo {
@@ -354,6 +388,12 @@ height: 350px
 }
 .hero-android {
   background-image: linear-gradient(#1dca08, rgba(26, 202, 5, 0.55)), url('/images/android1.jpg');
+
+  @include heroImage();
+}
+
+.hero-technology{
+  background-image: linear-gradient(#1dca08, rgba(26, 202, 5, 0.55)), url('/images/frontend-technology.png');
 
   @include heroImage();
 }
@@ -378,7 +418,10 @@ height: 350px
   background-size : cover ;
 
 }
-
+div {
+  text-align: justify;
+  
+}
 .hero-mobile:hover {
   background-image : linear-gradient(rgba(220, 80, 13, 0.7), rgba(0, 43, 165, 0.79)),url('/images/mobile-phone.jpg');
   color: white;
@@ -523,6 +566,11 @@ h2 {
   height: 450px;
 }
 
+carousel-inner >.item >img ,
+carousel-inner > .item > a >img {
+  width : 100% ;
+  margin : auto ;
+}
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
@@ -538,7 +586,7 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
+  
   .navbar a.icon {
     float: right;
     display: block;
@@ -565,5 +613,19 @@ h2 {
   height: 300px;
 }
 
+@media only screen and (max-width: 450px) {
+  
+
+.numberText {
+  font-size: 12px;
+  text-align: center;
+  padding: 15px;
+  font-style: italic;
+}
+}
 
 
+
+.carousel-caption {
+ top : 100px ;
+}

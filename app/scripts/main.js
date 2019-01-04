@@ -20,7 +20,7 @@ $(window).scroll( () => {
 
   //Random Text
 
-  var messages = ['Website Development', 'Mobile App Development', 'Web App Development', 'Ionic App Development ', 'Angular App Development', 'React App Development'];
+  var messages = ['Web App Development', 'Mobile App Development', 'Creative Graphics Design', 'Ecommerce Website', 'Android App Development', 'IOS App Development'];
   var rank = 1;
   document.getElementById('myTypewriter').addEventListener('webkitAnimationEnd', changeTxt);
   document.getElementById('myTypewriter').addEventListener('animationend', changeTxt);

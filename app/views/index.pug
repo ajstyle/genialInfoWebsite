@@ -6,20 +6,52 @@ block title
 block content
 
   main#main
-    section.banner-homepage.d-none.d-sm-block
-            .banner-text
-             h1.heading| WE &nbsp;  DO
-             #myTypewriter.typewriter
-               h1(style = 'color : white; font-size : 40px') Website Development
+    //- section.banner-homepage.d-none.d-sm-block
+    //-         .banner-text
+    //-          h1.heading| WE &nbsp;  DO
+    //-          #myTypewriter.typewriter
+    //-            h1(style = 'color : white; font-size : 40px') Website Development
     section.banner-mobilepage.d-block.d-sm-none
             .banner-mobile-text
              h1.heading-mobile| WE &nbsp;  DO
              #mobileTypewriter.typewriter
                h1(style = 'color : white ; font-size : 20px') Website Development
+    .bannerContainer
+      #slider1.carousel.slide.carousel-fade(data-ride='carousel' data-interval="2000")
+         .carousel-inner
+            ol.carousel-indicators
+              li(data-target="#slider1" data-slide-to="0" class="active")
+              li(data-target="#slider1" data-slide-to="1" )
+              li(data-target="#slider1" data-slide-to="2" )
+              li(data-target="#slider1" data-slide-to="3" )
+            .carousel-caption.col-xl-5.col-md-5.col-sm-4.offset-2
+              .banner-text
+              h1.heading| WE &nbsp;  DO
+              #myTypewriter.typewriter
+                h1(style = 'color : white; font-size : 37px') Website Development
+            .carousel-item.active
+              section.banner-homepage.d-none.d-sm-block
+            .carousel-item
+              section.banner2-homepage.d-none.d-sm-block
+            .carousel-item
+              section.banner3-homepage.d-none.d-sm-block
+            .carousel-item
+              section.banner4-homepage.d-none.d-sm-block
+            a.carousel-control-prev(href ="#slider1" data-slide="prev" role="button" ) 
+             span.carousel-control-prev-icon(aria-hidden="true")
+             span.sr-only Prev
+            a.carousel-control-next(href ="#slider1" data-slide="next" role="button" )
+             span.carousel-control-next-icon(aria-hidden="true")
+             span.sr-only Next
+
   // Services
   section
-   p.numberText  We begin to serve you before you know it
-   p.numberText(style = 'color : orange')  Our Solution to your Imaginations
+   div.col-xl-12.col-sm-12
+    p.numberText  We begin to serve you before you know it
+    p.numberText(style = 'color : orange')  Our Solution to your Imaginations
+  
+  
+  
   .container-fluid
   .row.justify-content-md-center
     .col.col-lg-3.mb-5.hero-mobile
@@ -68,16 +100,16 @@ block content
      .typewriter
        p.numberText  it is the NUMBER that keep us motivated
        .row.px-5.t-5.number
-          .col
+          .col.col-12.col-md-3.col-lg-3
             div.numscroller(data-min='1', data-max='10', data-delay='1', data-increment='1')
             p.lead Technocrats
-          .col
+          .col.col-12.col-md-3.col-lg-3
             div.numscroller(data-min='1', data-max='14', data-delay='1', data-increment='1')
             p.lead Projects
-          .col.col-lg-2(data-min='1', data-max='10', data-delay='1', data-increment='1')
+          .col.col-lg-3.col-md-3
             div.numscroller(data-min='1', data-max='17', data-delay='1', data-increment='1')
             p.lead client
-          .col
+          .col.col-12.col-lg-3.col-md-3
            svg(height='50', viewbox='0 20 200 120' , )
             path(fill='none', stroke='#333333', stroke-width='5', d='M100,100 \
              C200,0 200,200 100,100\
@@ -96,21 +128,24 @@ block content
         .card-body
           h5.card-title Javascript
           p.card-text With supporting text below as a natural lead-in to additional content.
-          a.btn.btn-primary(href='#') Read more
+          div.col-md-12.text-center
+            a.btn.btn-primary.text-center(href='#') Read more
       .col-sm-4
          .card
           img.card-img-top.center(src='/images/mean.png', alt='Card image cap')
           .card-body
             h5.card-title MEAN stack
             p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Read more
+            div.col-md-12.text-center
+              a.btn.btn-primary(href='#') Read more
       .col-sm-4
          .card
           img.card-img-top.center(src='/images/node.png', alt='Card image cap' style = "height : 100px" )
           .card-body
             h5.card-title Ionic
             p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Read more
+            div.col-md-12.text-center
+              a.btn.btn-primary(href='#') Read more
 
       .row
       .col-sm-4
@@ -119,18 +154,21 @@ block content
         .card-body
           h5.card-title Android Apps
           p.card-text With supporting text below as a natural lead-in to additional content.
-          a.btn.btn-primary(href='#') Read more
+          div.col-md-12.text-center
+           a.btn.btn-primary(href='#') Read more
       .col-sm-4
          .card
           img.card-img-top.center(src='/images/ios.png', alt='Card image cap')
           .card-body
             h5.card-title IOS Apps
             p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Read more
+            div.col-md-12.text-center
+              a.btn.btn-primary(href='#') Read more
       .col-sm-4
          .card
           img.card-img-top.center(src='/images/Angular.png', alt='Card image cap')
           .card-body
             h5.card-title Angular Js
             p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Read more
+            div.col-md-12.text-center
+              a.btn.btn-primary(href='#') Read more
