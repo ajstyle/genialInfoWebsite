@@ -1,0 +1,66 @@
+extends ./layouts/default
+block prepend link
+  - var selected = 'Ecommerce'
+block title
+  title='Genial Info | Ecommerce, Services'
+
+block content
+    
+  section.hero-portfolio
+   .container
+     .row
+       .col-md-12.p-5
+          h1.heading.text-center.animated.fadeInLeft.delay-0.5s(style = 'padding-top : 110px') Portfolio
+
+  section.section-padding#portfolio
+    .container
+      .row
+        .col-sm-12
+          .title.text-center
+            h3.mt-5.decorate Our Work               
+
+    .container
+      .grid-padding#my-grid
+        .row
+          .col-sm-4
+            .row
+              img(src = '/images/whatsapp-interface.png' onclick = "openModal();currentSlide(1)").fit-image
+            .row
+              img(src = '/images/wood.jpg' onclick = "openModal();currentSlide(2)").fit-image
+            .row  
+              img(src = '/images/wordpress.jpg' onclick = "openModal();currentSlide(3)").fit-image
+            .row  
+              img(src = '/images/banner1.jpg' onclick = "openModal();currentSlide(4)").fit-image
+            .row  
+              img(src = '/images/shopping.jpg' onclick = "openModal();currentSlide(4)").fit-image
+          .col-sm-4
+            .row
+              img(src = '/images/wordpress.jpg' onclick = "openModal();currentSlide(5)").fit-image
+            .row
+              img(src = '/images/banner1.jpg' onclick = "openModal();currentSlide(6)").fit-image
+            .row  
+              img(src = '/images/whatsapp-interface.png' onclick = "openModal();currentSlide(7)").fit-image
+            .row  
+              img(src = '/images/shopping.jpg' onclick = "openModal();currentSlide(8)").fit-image
+            .row  
+              img(src = '/images/wood.jpg' onclick = "openModal();currentSlide(8)").fit-image
+
+          .col-sm-4
+            .row
+              img(src = '/images/shopping.jpg' onclick = "openModal();currentSlide(11)").fit-image
+            .row
+              img(src = '/images/banner1.jpg' onclick = "openModal();currentSlide(12)").fit-image
+            .row  
+              img(src = '/images/wood.jpg' onclick = "openModal();currentSlide(13)").fit-image
+            .row  
+              img(src = '/images/wordpress.jpg' onclick = "openModal();currentSlide(14)").fit-image
+            .row  
+              img(src = '/images/whatsapp-interface.png' onclick = "openModal();currentSlide(15)").fit-image
+
+
+    #my-modal.modal
+      span.close(onclick = "closeModal()") &times;
+      .modal-content
+        .my-slides
+          .numbertext 1/15
+          i
